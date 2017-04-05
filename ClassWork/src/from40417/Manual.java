@@ -26,6 +26,7 @@ public class Manual {
                 n.switchman();
             }
         }
+        //git
         System.out.println();
     }
 }
