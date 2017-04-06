@@ -16,7 +16,7 @@ public class Solution2 {
         String str = "";
         String[][] arr = new String[24][60];
         String[] arrbuf = new String[1];
-        String[] arrsim = new String[17];
+        //String[] arrsim = new String[];
         for (int i = 0; i < hh; i++){
             for (int j = 0; j < mm; j++){
                 if (i < 10 && j < 10) {
@@ -55,7 +55,6 @@ public class Solution2 {
                         counter++;
                     }
                     if (ch.length() == counter) {
-
                         counter1++;
                         System.out.print( "\"" + ch + "\"\n");
                     counter=0;
