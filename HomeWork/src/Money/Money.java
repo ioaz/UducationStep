@@ -23,64 +23,80 @@ public class Money {
     Scanner scanner = new Scanner(System.in);
 
     double amount;
-    char currency;
-
+    String currency;
+    double am;
+    String v;
     static final double USD = 56.96;
     static final double EUR = 60.30;
     static final double CNY = 82.51;
 
-    public Money() {
-    }
-
-    public Money(double amount) {
+    Money(double amount, String currency) throws IOException {
         this.amount = amount;
+        this.currency = currency;
     }
 
-    public Money convert (char currency) throws IOException {
-        System.out.print("Введите сумму в рублях: ");
-        amount = scanner.nextDouble();
+    Money(double amount) {
+        am = amount;
+    }
 
-        System.out.println("Выберите валюту в котурую конвертируем: ");
-        System.out.println(" 1. USA");
-        System.out.println(" 2. EUR");
-        System.out.println(" 3. CNY");
-
-        currency = (char) reader.read();
-
-        switch (currency){
-            case '1':
-                this.amount = amount / USD;
-                System.out.println(this.amount + " USA");
+    public Money convert(String curr) throws IOException {
+        //System.out.print("Введите сумму в рублях: ");
+        //amount = scanner.nextDouble();
+        curr = currency;
+        switch (curr) {
+            case "1":
+                am = amount / USD;
+                System.out.println(amount + "р. = " + am + "$");
                 return new Money(amount);
-            case '2':
-                this.amount = amount / EUR;
-                System.out.println(this.amount + " EUR");
+            case "2":
+                am = amount / EUR;
+                System.out.println(amount + "р. = " + am + "EUR");
                 return new Money(amount);
-            case '3':
-                this.amount = amount / CNY;
-                System.out.println(this.amount + " CNY");
+            case "3":
+                am = amount / CNY;
+                System.out.println(amount + "р. = " + am + "CNY");
                 return new Money(amount);
         }
+
         return null;
     }
 
-    public void add(double convert){
-        amount = scanner.nextDouble();
-        this.amount = convert + amount;
-        System.out.println(amount);
+    double add() throws IOException {
+        System.out.println("Желаете изменить сумму? (y / n)");
+        v = reader.readLine();
+        switch (v) {
+            case "y":
+                System.out.print("Введите новую сумму: ");
+                this.amount = Integer.parseInt(reader.readLine());
+                System.out.println("Желаете изменить валюту? (y / n)");
+                v = reader.readLine();
+                switch (v) {
+                    case "y":
+                        changeCurr();
+                        break;
+                }
+                return this.amount;
 
+            case "n":
+                System.out.println("Желаете изменить валюту? (y / n)");
+                v = reader.readLine();
+                switch (v) {
+                    case "y":
+                        changeCurr();
+                        break;
+                }
+                break;
+        }
+        return this.amount;
     }
-    public double subtract(){
 
-        return 0;
+    void changeCurr() throws IOException {
+        System.out.println(" 1. USA");
+        System.out.println(" 2. EUR");
+        System.out.println(" 3. CNY");
+        System.out.print("Выберите новую валюту: ");
+        currency = reader.readLine();
     }
-    public double multiple(){
 
-        return 0;
-    }
-    public double divide(){
-
-        return 0;
-    }
 }
 

@@ -1,6 +1,8 @@
 package Money;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by ioa on 12.04.17.
@@ -17,13 +19,23 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        Money money = new Money();
-        Money convert = money.convert(money.currency);
-        convert.add(convert.amount);
-        //System.out.println(convert.amount);
-        System.out.println(convert.amount);
-        System.out.println(money.amount);
+        System.out.println(" 1. USA");
+        System.out.println(" 2. EUR");
+        System.out.println(" 3. CNY");
+        System.out.print("Выберете валюту (select one): ");
+        String currency = reader.readLine();
+        System.out.print("Введите сумму в рублях: ");
+        double amountRUB = Integer.parseInt(reader.readLine());
+
+        Money mymoney = new Money(amountRUB, currency);
+        Money convert = mymoney.convert(mymoney.currency);
+        convert.amount = mymoney.am;
+        mymoney.add();
+        convert = mymoney.convert(mymoney.currency);
+        convert.amount = convert.am;
+
     }
 }
 
