@@ -6,17 +6,17 @@ import java.util.Random;
  * Created by ioa on 28.03.17.
  *
  */
-public class Solution {
-    public static void main(String[] args){
 
 //Задание 1. Заполните двухмерный массив случайными числами и
 // построчно перенесите эти числа в одномерный массив.
 
+public class Solution {
+
+    static int[][] arr = new int[4][4];
+
+    public static int[][] createArr(){
+
         Random random = new Random();
-        int[][] arr = new int[4][4];
-        int[] arr2 = new int[arr.length*4];
-        int[] arr3 = new int[arr.length*4];
-        int t = 0;
 
         for (int i = 0; i < 4; i++){
             for (int j = 0; j < 4; j++){
@@ -25,6 +25,15 @@ public class Solution {
             }
             System.out.println();
         }
+        return new int[4][4];
+    }
+
+    public static void main(String[] args){
+
+        createArr();
+        int[] arr2 = new int[arr.length*4];
+        int[] arr3 = new int[arr.length*4];
+        int t = 0;
         System.out.println();
 
         for (int i = 0; i < arr.length; i++) {
@@ -38,7 +47,6 @@ public class Solution {
             System.out.print(arr2[i] + " ");
         }
         System.out.println();
-
         t = 0;
 
         for (int i = 0; i < arr.length; i++) {

@@ -1,8 +1,9 @@
 # Папки
 out/
 src/
+!ClassWork/src/
+!HomeWork/src/
 .git/
-.git1/
 .idea/
 
 #Файлы

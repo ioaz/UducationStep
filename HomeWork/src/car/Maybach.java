@@ -3,14 +3,15 @@ package car;
 /**
  * Created by ioa on 21.04.17.
  */
-public class Car {
+public class Maybach {
+    final static int FUEL_MAYBACH = 5;
     boolean move;
     int fueltank;
     int lkm;
-    private long startTime;
-    private long endTime;
+//    private long startTime;
+//    private long endTime;
 
-    Car(int fueltank, int lkm){
+    Maybach(int fueltank, int lkm){
         this.fueltank = fueltank;
         this.lkm = lkm;
     }
@@ -38,22 +39,9 @@ public class Car {
     int getFuel() {
         return this.fueltank;
     }
-    void refuel(int fueltank){
-        this.fueltank = fueltank;
+    void refuel(){
+        this.fueltank = FUEL_MAYBACH;
     }
-
-//    long startTime() {
-//        startTime = System.currentTimeMillis();
-//        return startTime;
-//    }
-//    long endTime() {
-//        endTime = System.currentTimeMillis();
-//        return endTime;
-//    }
-//
-//    double time(){
-//        double diff = ((endTime - startTime)/1000);
-//        return diff;
-//    }
 }
+
 

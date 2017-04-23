@@ -1,39 +1,54 @@
 package from40417;
 
-import java.util.Scanner;
-
 /**
  * Created by ioa on 04.04.17.
  */
 
 public class Manual {
-
-    public static void out(String str) {
-        System.out.println(str);
-    }
-
-    public static void helpIf(){
-      // return ("if else");
-    }
-
-    public static void switchman(){
-       out("switch(blabla)");
-    }
-
     public static void main(String[] args) {
+        Square square = new Square(6);
+        Rectangle rectangle = new Rectangle(3,5);
+        System.out.println("Square perimeter: " + square.getPerimeter());
+        System.out.println("Square area: " + square.getArea());
+        System.out.println("Rectangle perimeter: " + rectangle.getPerimeter());
+        System.out.println("Rectangle area: " + rectangle.getArea());
 
-        Scanner scanner = new Scanner(System.in);
-        int i = 1;
-        out("Справка по: " + "\n1. if \n" + "2. switch");
-        while (i>0){
-            int s = scanner.nextInt();
-            if (s == 1){
-            //    ifelse();
-            }
-            if (s==2){
-                switchman();
-            }
+        if (square instanceof Square){
+            System.out.println("Object type is Square");
         }
-    }
+        if (square instanceof Rectangle){
+            System.out.println("Object type is Rectangle");
+        }
 
+    }
+}
+
+class Square {
+    int width;
+
+    public Square(int width){
+        this.width = width;
+    }
+    public int getPerimeter(){
+        return 4 * width;
+    }
+    public int getArea(){
+        return width * width;
+    }
+}
+
+class Rectangle extends Square {
+    int height;
+    public Rectangle(int width, int height) {
+        super(width);
+        this.height = height;
+    }
+    @Override
+    public int getPerimeter(){
+        return 2 * (height+width);
+    }
+    @Override
+    public int getArea(){
+        return width * height;
+    }
 }

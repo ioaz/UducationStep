@@ -1,4 +1,4 @@
-package vehicle.work0026;
+package test.work0026;
 
 import java.util.Scanner;
 

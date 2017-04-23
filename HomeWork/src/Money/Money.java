@@ -30,7 +30,7 @@ public class Money {
     static final double EUR = 60.30;
     static final double CNY = 82.51;
 
-    Money(double amount, String currency) throws IOException {
+    Money(double amount, String currency)  {
         this.amount = amount;
         this.currency = currency;
     }

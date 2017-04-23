@@ -1,4 +1,4 @@
-package vehicle.work0027;
+package test.work0027;
 
 /**
  * Created by ioa on 19.03.17.
