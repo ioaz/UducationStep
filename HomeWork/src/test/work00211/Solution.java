@@ -1,4 +1,4 @@
-package test.work00211;
+package vehicle.work00211;
 
 import java.util.Random;
 
