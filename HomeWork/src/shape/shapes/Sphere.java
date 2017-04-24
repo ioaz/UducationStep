@@ -1,11 +1,14 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.BodyShape;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
 public class Sphere extends Shape implements BodyShape {
 
-    Sphere(double r){
+    public Sphere(double r){
         this.r = r;
     }
 

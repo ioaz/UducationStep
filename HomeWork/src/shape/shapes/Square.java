@@ -1,9 +1,12 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.*;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-class Square extends Shape implements AreaShape {
+public class Square extends Shape implements AreaShape {
 
     public Square(int a){
         this.a = a;

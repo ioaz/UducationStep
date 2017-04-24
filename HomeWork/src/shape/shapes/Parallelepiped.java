@@ -1,11 +1,14 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.BodyShape;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public class Parallelepiped extends Shape implements BodyShape{
+public class Parallelepiped extends Shape implements BodyShape {
 
-    Parallelepiped(double a, double b, double c){
+    public Parallelepiped(double a, double b, double c){
         this.a = a;
         this.b = b;
         this.c = c;

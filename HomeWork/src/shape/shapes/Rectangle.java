@@ -1,9 +1,12 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.AreaShape;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-class Rectangle extends Shape implements AreaShape  {
+public  class Rectangle extends Shape implements AreaShape {
     public Rectangle(int a, int b) {
         this.a = a;
         this.b = b;

@@ -1,13 +1,14 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.AreaShape;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public class Parallelogram extends Shape implements AreaShape{
+public class Parallelogram extends Shape implements AreaShape {
 
-    double h;
-
-    Parallelogram (double a, double b, double h){
+    public Parallelogram(double a, double b, double h){
         this.a = a;
         this.b = b;
         this.h = h;

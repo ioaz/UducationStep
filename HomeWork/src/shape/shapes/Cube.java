@@ -1,11 +1,14 @@
-package shape;
+package shape.shapes;
+
+import shape.interfases.BodyShape;
+import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
 public class Cube extends Shape implements BodyShape {
 
-    Cube (double a){
+    public Cube(double a){
         this.a = a;
     }
     @Override
