@@ -3,7 +3,7 @@ package car;
 /**
  * Created by ioa on 21.04.17.
  */
-public class Maybach {
+class Maybach {
     final static int FUEL_MAYBACH = 5;
     boolean move;
     int fueltank;

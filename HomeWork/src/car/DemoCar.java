@@ -40,7 +40,7 @@ import java.io.InputStreamReader;
                             for (; maybach.move == true; ) {
                                 Thread.sleep(1000); // interrupt 1 sec
                                 maybach.fueltank -= maybach.lkm;
-                                if (maybach.getFuel() == 1) {
+                                if (maybach.getFuel() <= 1) {
                                     System.out.println("OMG fuel ends!....");
                                     System.out.println("Left fuel: " + maybach.getFuel() +
                                             " L., Fill a full tank? (y:n)");
@@ -75,7 +75,7 @@ import java.io.InputStreamReader;
                 }
             }
             if (selection.equals("2")) {
-                System.out.println("Lorry!\n Fuel level = " + Lorry.FUEL_LORRY +
+                System.out.println("Lorry!\n Fuel level = " + lorry.FUEL_LORRY +
                         " L.\n Fuel consumption = " + lorry.lkm + " L./s." );
                 for (; ; ) {
                     System.out.println("1 -> move");
@@ -88,14 +88,13 @@ import java.io.InputStreamReader;
                         if (selection.equals("1") && lorry.fueltank > 1) {
                             lorry.start();
                             for (; lorry.move == true; ) {
-                                Thread.sleep(1000);
+                                Thread.sleep(1000); // interrupt 1 sec
                                 lorry.fueltank -= lorry.lkm;
-                                if (lorry.getFuel() <= 1) {
+                                if (lorry.getFuel() <= 2) {
                                     System.out.println("OMG fuel ends!....");
                                     System.out.println("Left fuel: " + lorry.getFuel() +
                                             " L., Fill a full tank? (y:n)");
                                     selection = reader.readLine();
-
                                     if (selection.equals("y")) {
                                         lorry.refuel();
                                         System.out.println("Fuel tank is full: " + lorry.getFuel()
@@ -103,26 +102,26 @@ import java.io.InputStreamReader;
                                         lorry.isGoes();
                                     }
                                 }
-                                if (lorry.getFuel() <= 0)
+                                if (lorry.getFuel() == 0) {
                                     System.out.println("NOOOO fuel level: " + lorry.getFuel()
                                             + " L.");
                                     lorry.stop();
+                                }
                             }
-                        } 
+                        }
                         else if (lorry.isGoes() == false && lorry.getFuel() == 0) {
                             System.out.println("No fuel, fill a full tank? (y:n)");
                             selection = reader.readLine();
                             if (selection.equals("y")) {
                                 lorry.refuel();
-                                System.out.println("YHOOOO! lorry fuel tank is full!");
-                            }
+                                System.out.println("YHOOOO! Lorry fuel tank is full!");
+                            } else break;
                         }
                     }
                 }
                 if (lorry.isGoes() == true) {
-                    if (selection.equals("2")) {
+                    if (selection.equals("2"))
                         lorry.stop();
-                    }
                 }
             }
         }
