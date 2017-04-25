@@ -1,6 +1,6 @@
 package shape.shapes;
 
-import shape.interfases.*;
+import shape.interfaces.*;
 import shape.Shape;
 
 /**
@@ -13,10 +13,12 @@ public class Square extends Shape implements AreaShape {
     }
     @Override
     public double getPerimeter(){
+        System.out.print("Square perimeter: ");
         return 4 * a;
     }
     @Override
     public double getArea(){
+        System.out.print("Square area: ");
         return a * a;
     }
 

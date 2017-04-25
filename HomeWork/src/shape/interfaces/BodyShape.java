@@ -1,4 +1,4 @@
-package shape.interfases;
+package shape.interfaces;
 
 /**
  * Created by ioa on 24.04.17.

@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Square square = new Square(6);
         Rectangle rectangle = new Rectangle(3,5);
-        Circle Circle = new Circle(4.6);
+        Circle circle = new Circle(4.6);
         Parallelogram parallelogram = new Parallelogram(5.2,4.7,2.9);
         Sphere sphere = new Sphere(2.5);
         Cube cube = new Cube(4);
@@ -18,11 +18,14 @@ public class Main {
         System.out.println("Square perimeter: " + square.getPerimeter());
         System.out.println("Square area: " + square.getArea());
         System.out.println();
+
+        rectangle.drawRectangle();
         System.out.println("Rectangle perimeter: " + rectangle.getPerimeter());
         System.out.println("Rectangle area: " + rectangle.getArea());
+
         System.out.println();
-        System.out.println("Circle area: " + Circle.getArea());
-        System.out.println("Circle perimeter: " + Circle.getPerimeter());
+        System.out.println("Circle area: " + circle.getArea());
+        System.out.println("Circle perimeter: " + circle.getPerimeter());
         System.out.println();
         System.out.println("Parallelogram area: " + parallelogram.getArea());
         System.out.println("Parallelogram perimeter: " + parallelogram.getPerimeter());
@@ -36,6 +39,7 @@ public class Main {
         System.out.println("The surface area of the parallelepiped: " +
                 parallelepiped.getSurfaceArea());
         System.out.println("Volume of the parallelepiped: " + parallelepiped.getVolume());
+
 //        Оператор instanceof сравнивает объект с указанным типом.
 //        Вы можете использовать его, чтобы проверить, является ли
 //        объект экземпляром класса, экземпляром подкласса или экземпляром

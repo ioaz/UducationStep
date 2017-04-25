@@ -1,6 +1,6 @@
 package shape.shapes;
 
-import shape.interfases.AreaShape;
+import shape.interfaces.AreaShape;
 import shape.Shape;
 
 /**
