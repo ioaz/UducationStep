@@ -1,13 +1,15 @@
 package shape;
 
 import shape.shapes.*;
+
 /**
  * Created by ioa on 04.04.17.
  */
 
 public class Main {
     public static void main(String[] args) {
-        Square square = new Square(6);
+
+        Square square = new Square(5);
         Rectangle rectangle = new Rectangle(3,5);
         Circle circle = new Circle(4.6);
         Parallelogram parallelogram = new Parallelogram(5.2,4.7,2.9);
@@ -15,39 +17,33 @@ public class Main {
         Cube cube = new Cube(4);
         Parallelepiped parallelepiped = new Parallelepiped(5.1,3.5,8.4);
 
-        System.out.println("Square perimeter: " + square.getPerimeter());
-        System.out.println("Square area: " + square.getArea());
-        System.out.println();
 
-        rectangle.drawRectangle();
-        System.out.println("Rectangle perimeter: " + rectangle.getPerimeter());
-        System.out.println("Rectangle area: " + rectangle.getArea());
+//        printShape(square);
+//        square.multiply(2);
+//        printShape(square);
+//        square.add(5);
+//        printShape(square);
+//
+//        printShape(circle);
+//        circle.multiply(2);
+//        printShape(circle);
 
-        System.out.println();
-        System.out.println("Circle area: " + circle.getArea());
-        System.out.println("Circle perimeter: " + circle.getPerimeter());
-        System.out.println();
-        System.out.println("Parallelogram area: " + parallelogram.getArea());
-        System.out.println("Parallelogram perimeter: " + parallelogram.getPerimeter());
-        System.out.println();
-        System.out.println("The surface area of the sphere: " + sphere.getSurfaceArea());
-        System.out.println("Volume of the sphere : " + sphere.getVolume());
-        System.out.println();
-        System.out.println("The surface area of the cube: " + cube.getSurfaceArea());
-        System.out.println("Volume of the cube: " + cube.getVolume());
-        System.out.println();
-        System.out.println("The surface area of the parallelepiped: " +
-                parallelepiped.getSurfaceArea());
-        System.out.println("Volume of the parallelepiped: " + parallelepiped.getVolume());
+//        printShape(rectangle);
+//        printShape(circle);
+//        printShape(parallelogram);
+//        printShape(sphere);
+//        printShape(cube);
+//        printShape(parallelepiped);
 
 //        Оператор instanceof сравнивает объект с указанным типом.
 //        Вы можете использовать его, чтобы проверить, является ли
 //        объект экземпляром класса, экземпляром подкласса или экземпляром
 //        класса, который реализует определенный интерфейс.
 
-//        if (square instanceof HasRectangle){
-//            System.out.println("square - object type is Square");
+//        if (circle instanceof AreaShape){
+//            System.out.println(circle.getName() + " object type is Square");
 //        }
+//        else System.out.println("not");
 //        if (rectangle instanceof Rectangle){
 //            System.out.println("square - object type is Rectangle");
 //        }
@@ -59,6 +55,10 @@ public class Main {
 //        }
 
     }
+
+
+
+
 }
 
 

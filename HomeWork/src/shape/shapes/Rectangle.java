@@ -1,13 +1,14 @@
 package shape.shapes;
 
-import shape.interfaces.AreaShape;
+import shape.interfaces.AreaAndPerimeter;
 import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public  class Rectangle extends Shape implements AreaShape {
+public  class Rectangle extends Shape implements AreaAndPerimeter {
     public Rectangle(int a, int b) {
+        name = "Rectangle";
         this.a = a;
         this.b = b;
     }
@@ -21,4 +22,10 @@ public  class Rectangle extends Shape implements AreaShape {
     public double getPerimeter(){
         return 2 * (b+a);
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
 }

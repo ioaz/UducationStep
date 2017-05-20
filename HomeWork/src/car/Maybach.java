@@ -8,6 +8,7 @@ class Maybach {
     boolean move;
     int fueltank;
     int lkm;
+    String name;
 //    private long startTime;
 //    private long endTime;
 

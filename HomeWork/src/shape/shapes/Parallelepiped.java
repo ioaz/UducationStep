@@ -1,14 +1,15 @@
 package shape.shapes;
 
-import shape.interfaces.BodyShape;
+import shape.interfaces.SurfaceAreaAndVolume;
 import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public class Parallelepiped extends Shape implements BodyShape {
+public class Parallelepiped extends Shape implements SurfaceAreaAndVolume {
 
     public Parallelepiped(double a, double b, double c){
+        name = "Parallelepiped";
         this.a = a;
         this.b = b;
         this.c = c;
@@ -21,5 +22,10 @@ public class Parallelepiped extends Shape implements BodyShape {
     @Override
     public double getVolume() {
         return a * b * c;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

@@ -40,7 +40,7 @@ import java.io.InputStreamReader;
                             for (; maybach.move == true; ) {
                                 Thread.sleep(1000); // interrupt 1 sec
                                 maybach.fueltank -= maybach.lkm;
-                                if (maybach.getFuel() <= 1) {
+                                if (maybach.getFuel() == 2) {
                                     System.out.println("OMG fuel ends!....");
                                     System.out.println("Left fuel: " + maybach.getFuel() +
                                             " L., Fill a full tank? (y:n)");
@@ -90,7 +90,7 @@ import java.io.InputStreamReader;
                             for (; lorry.move == true; ) {
                                 Thread.sleep(1000); // interrupt 1 sec
                                 lorry.fueltank -= lorry.lkm;
-                                if (lorry.getFuel() <= 2) {
+                                if (lorry.getFuel() == 2) {
                                     System.out.println("OMG fuel ends!....");
                                     System.out.println("Left fuel: " + lorry.getFuel() +
                                             " L., Fill a full tank? (y:n)");

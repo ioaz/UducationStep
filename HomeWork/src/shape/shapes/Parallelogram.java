@@ -1,14 +1,15 @@
 package shape.shapes;
 
-import shape.interfaces.AreaShape;
+import shape.interfaces.AreaAndPerimeter;
 import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public class Parallelogram extends Shape implements AreaShape {
+public class Parallelogram extends Shape implements AreaAndPerimeter {
 
     public Parallelogram(double a, double b, double h){
+        name = "Parallelogram";
         this.a = a;
         this.b = b;
         this.h = h;
@@ -22,4 +23,10 @@ public class Parallelogram extends Shape implements AreaShape {
     public double getPerimeter() {
         return 2 * (b + a);
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
 }

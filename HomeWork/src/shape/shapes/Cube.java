@@ -1,14 +1,15 @@
 package shape.shapes;
 
-import shape.interfaces.BodyShape;
+import shape.interfaces.SurfaceAreaAndVolume;
 import shape.Shape;
 
 /**
  * Created by ioa on 24.04.17.
  */
-public class Cube extends Shape implements BodyShape {
+public class Cube extends Shape implements SurfaceAreaAndVolume {
 
     public Cube(double a){
+        name = "Cube";
         this.a = a;
     }
     @Override
@@ -19,5 +20,10 @@ public class Cube extends Shape implements BodyShape {
     @Override
     public double getVolume() {
         return Math.pow(a,3);
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
