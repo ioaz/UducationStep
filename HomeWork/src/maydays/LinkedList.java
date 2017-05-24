@@ -19,19 +19,19 @@ public class LinkedList<E> implements Queue<E>, Iterable<E>, DescendingIterator 
     @Override
     public void addLast(E e) {
         Node<E> prev = lstNode; // еще один указатель что бы не потерять данные
-        prev.setCurrentItem(e); // задали текущий елемент (а был null)
+        prev.item = e; // задали текущий елемент (а был null)
         lstNode = new Node<E>(null, prev,null);//заменили старый на новый и задали елемент
-        prev.setNextItem(lstNode); // задаем указатель на след элем.
+        prev.next = lstNode; // задаем указатель на след элем.
         size++;
     }
 
     @Override
     public void addFirst(E e) {
-    Node<E> next = frsNode;
-    next.setCurrentItem(e);
-    frsNode = new Node<E>(null,null,next);
-    next.setPrevItem(frsNode);
-    size++;
+        Node<E> next = frsNode;
+        next.setCurrentItem(e);
+        frsNode = new Node<E>(null, null, next);
+        next.setPrevItem(frsNode);
+        size++;
 
     }
 
@@ -42,9 +42,9 @@ public class LinkedList<E> implements Queue<E>, Iterable<E>, DescendingIterator 
 
     @Override
     public E getItemByIndex(int index) {
-        Node<E> target = frsNode.getNextItem(); //
+        Node<E> target = frsNode.next; //
         for(int i=0; i<index; i++){
-            target = getNextItem(target);
+            target = target.next;
         }
         return target.getCurrentItem();
     }

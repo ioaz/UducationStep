@@ -3,7 +3,6 @@ package maydays;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 
 /**
  * Created by ioa on 17.05.17.
@@ -20,16 +19,27 @@ public class Main {
 
         linkedList.addLast("1");
         linkedList.addLast("2");
-//        linkedList.addFirst("first");
+        linkedList.addFirst("first");
         linkedList.addLast("3");
+        linkedList.addLast("4");
+        linkedList.addLast("5");
 
         for (String s : linkedList) {
             System.out.println(s);
         }
-
-        Iterator iterator = linkedList.descendingIterator();
-        while (iterator.hasNext())
-            System.out.println(iterator.next());
+//        System.out.println(linkedList.getItemByIndex(0));
+//        System.out.println(linkedList.getItemByIndex(1));
+//        System.out.println(linkedList.getItemByIndex(2));
+//        System.out.println(linkedList.getItemByIndex(3));
+//        System.out.println(linkedList.getItemByIndex(4));
+//        System.out.println(linkedList.getItemByIndex(5));
+//        for (String s : linkedList) {
+//            System.out.println(s);
+//        }
+//
+//        Iterator iterator = linkedList.descendingIterator();
+//        while (iterator.hasNext())
+//            System.out.println(iterator.next());
 
 //        System.out.println("size: " + linkedList.size());
 //
