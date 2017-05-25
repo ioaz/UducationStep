@@ -27,6 +27,7 @@ public class Main {
         for (String s : linkedList) {
             System.out.println(s);
         }
+
 //        System.out.println(linkedList.getItemByIndex(0));
 //        System.out.println(linkedList.getItemByIndex(1));
 //        System.out.println(linkedList.getItemByIndex(2));

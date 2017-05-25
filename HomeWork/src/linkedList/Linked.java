@@ -5,8 +5,11 @@ package linkedList;
  */
 public interface Linked<E> {
 
-    void add(E e);
-//    void addFirst(E e);
+    void addLast(E e);
+    void addItemByIndex(E e, int index);
     int size();
     E getItemByIndex(int index);
+    boolean remove(int index);
+
+
 }
