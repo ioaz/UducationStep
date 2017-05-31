@@ -69,6 +69,11 @@ public class LinkedList<E> implements Linked<E>{
 
     @Override
     public boolean remove(int index) {
+        rangePointer(index);
+        if(index>size){
+            System.out.println("not found removing item ");
+            return false;
+        }
 
         Node<E> frs = this.frs; // head
         Node<E> t = frs.next; // first

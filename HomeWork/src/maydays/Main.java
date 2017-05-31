@@ -1,8 +1,6 @@
 package maydays;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * Created by ioa on 17.05.17.
@@ -47,19 +45,17 @@ public class Main {
 //        for (int i = 0; i < linkedList.size(); i++) {
 //            System.out.println(linkedList.getItemByIndex(i));
 //        }
-
-
         //        Scanner scanner = new Scanner(System.in);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-//        List<String> listString = new ArrayList();
-        List<Integer> listInteger = new ArrayList();
-//        List<Object> list2 = new ArrayList();
-
-        /* listString of Integer */
-
-        for (int i = 0; i < 10; i++) {
-            listInteger.add(i);
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//
+////        List<String> listString = new ArrayList();
+//        List<Integer> listInteger = new ArrayList();
+////        List<Object> list2 = new ArrayList();
+//
+//        /* listString of Integer */
+//
+//        for (int i = 0; i < 10; i++) {
+//            listInteger.add(i);
         }
         //try {
         //    try {
@@ -215,4 +211,4 @@ public class Main {
 //            System.out.print(list2.get(i) + " ");
 //        }
     }
-}
+

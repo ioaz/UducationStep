@@ -19,7 +19,7 @@ public class LinkedListDemo {
         linkedList.addItemByIndex("last", linkedList.size);
 
         linkedList.remove(0);
-        linkedList.remove(2);
+        linkedList.remove(23);
 
         linkedList.printAll(linkedList.size);
 

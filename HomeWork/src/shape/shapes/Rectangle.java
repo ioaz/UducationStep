@@ -7,10 +7,12 @@ import shape.Shape;
  * Created by ioa on 24.04.17.
  */
 public  class Rectangle extends Shape implements AreaAndPerimeter {
-    public Rectangle(int a, int b) {
+    public Rectangle(int a, int b) throws Exception {
         name = "Rectangle";
         this.a = a;
         this.b = b;
+        if (a == 0||b == 0)
+            throw new Exception();
     }
 
     @Override

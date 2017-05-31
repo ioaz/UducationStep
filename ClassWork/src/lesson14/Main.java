@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by ioa on 18.05.17.
  */
+
 public class Main {
     public static class ExitException extends Exception{
 
