@@ -24,27 +24,34 @@ public class Main {
 
         while (true) {
             try {
+//                logOut = scanner.nextInt();
                 logOut = Integer.valueOf(reader.readLine());
             } catch (NumberFormatException e) {
                 System.out.println("You must enter an integer.");
+//            } catch (InputMismatchException e) {
+//                System.out.println("You must enter an integer.");
+//            }
+                if (logOut != null)
+                    break;
             }
-            if (logOut != null)
-                break;
-        }
 
-        MultiLogger logger = new MultiLogger(name, logOut);
+            MultiLogger logger = new MultiLogger(name, logOut);
 
-        exit:
-        while (true) {
-            String msg = scanner.nextLine();
-            switch (msg) {
-                case "exit":
-                    logger.error("Выход");
-                    break exit;
-                default:
-                    logger.info(msg);
+
+
+            exit:
+            while (true) {
+                String msg = scanner.nextLine();
+                switch (msg) {
+                    case "exit":
+                        logger.error("Выход");
+                        break exit;
+                    default:
+                        logger.info(msg);
+                }
             }
         }
     }
+
 }
 

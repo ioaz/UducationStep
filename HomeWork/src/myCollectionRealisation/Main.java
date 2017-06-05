@@ -8,7 +8,20 @@ public class Main {
 
         //ArrayList
 
+//        Scanner scanner = new Scanner
+// r(System.in);
+//        int i = scanner.nextInt();
+//        MyArrayList<String> stringMyArrayList = new MyArrayList<>();
+//
+//        if(i==1) {
+//            MyLinkedList<String> l = new MyLinkedList<>();
+//            while (true) {
+//                l.addFirst("fdfnjfvf  fgn");
+//            }
+//        }
+
         MyArrayList<Integer> myArrayList = new MyArrayList<Integer>();
+
 
         System.out.println("ArrayList:\n");
         for(int i=0; i<10;i++) {
@@ -19,11 +32,12 @@ public class Main {
         myArrayList.add(0,555);
         myArrayList.add(5,555);
 
-        myArrayList.set(4, 44);
+        System.out.println("set by index 4: (old elem: " + myArrayList.set(4, 44) + ")");
 
-        myArrayList.remove(5);
+        System.out.println("remove: " + myArrayList.remove(5));
 
         System.out.println("length = " + myArrayList.size());
+        System.out.print("list: ");
         for(int i=0; i<myArrayList.size();i++) {
             System.out.print(myArrayList.get(i) + " ");
         }
@@ -32,7 +46,7 @@ public class Main {
 
         MyQueue<String> myQueue = new MyLinkedList<>();
 
-        System.out.println("\nQueue:\n");
+        System.out.println("\n\nQueue:\n");
         myQueue.add("first");
         myQueue.add("2");
         myQueue.add("3");
@@ -44,6 +58,7 @@ public class Main {
 
         System.out.println("last: " + myQueue.getElementLast());
 
+        System.out.print("queue: ");
         for (int i = 0; i < myQueue.size();i++){
 
             System.out.print(myQueue.getElementByIndex(i) + ", ");
@@ -68,7 +83,7 @@ public class Main {
 
         System.out.println("removeLast: " + myDeque.removeLast());
 
-
+        System.out.print("deque: ");
         for (int i = 0; i < myDeque.size(); i++) {
 
             System.out.print(myDeque.getItemByIndexOnTheRight(i) + ", ");

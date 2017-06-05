@@ -17,6 +17,13 @@ public class MultiLogger implements Logger {
         this.logOut = logOut;
     }
 
+    public  void setUserName(String name){
+        this.userName = userName;
+    }
+    public  void getUserName(){
+
+    }
+
     private ConsoleLogger getConsoleLogger() {
         ConsoleLogger consoleLogger = new ConsoleLogger(userName);
         if (logOut == 1 || (switchLogOut == 3 && logOut == 3)) {
@@ -54,7 +61,9 @@ public class MultiLogger implements Logger {
 
     @Override
     public void info(String message) throws IOException {
+
         switchLogOut(message);
+
         if (logOut == 1 || switchLogOut == 1)
             getConsoleLogger().info(message);
 

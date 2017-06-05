@@ -112,3 +112,10 @@ fbb (Wed May 31 22:01:49 MSK 2017): logger all
 fbb (Wed May 31 22:01:50 MSK 2017): dfd
 fbb (Wed May 31 22:01:51 MSK 2017): sdf
 fbb (Wed May 31 22:01:54 MSK 2017): Выход
+шщф (Thu Jun 01 19:08:19 MSK 2017): logger file
+шщф (Thu Jun 01 19:08:20 MSK 2017): gfg
+шщф (Thu Jun 01 19:08:26 MSK 2017): file
+шщф (Thu Jun 01 19:08:36 MSK 2017): logger all
+шщф (Thu Jun 01 19:08:40 MSK 2017): all
+ioa (Thu Jun 01 19:17:27 MSK 2017): logger file
+ioa (Thu Jun 01 19:17:29 MSK 2017): fggf
